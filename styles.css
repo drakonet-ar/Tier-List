@@ -1,0 +1,414 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.slider-icon {
+    z-index: 1;
+    font-size: 18px;
+    transition: color 0.4s ease;
+    margin-left: 2px;
+}
+
+.dark-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: background-color 0.4s ease;
+}
+
+.dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: background-color 0.4s ease;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    border-radius: 50%;
+}
+
+.slider-icon:first-child { /* Sol */
+    color: white; /* Sol negro cuando no está activado */
+}
+
+.slider-icon:last-child { /* Luna */
+    color: black; /* Luna del mismo color que el fondo cuando no está activado */
+}
+
+input:checked + .slider {
+    background-color: #4c4c4c; /* Fondo oscuro para dark mode */
+}
+
+input:checked + .slider:before {
+    transform: translateX(38px); /* Desliza el toggle a la derecha */
+    background-color: white;
+}
+
+input:checked + .slider .slider-icon:first-child { /* Sol se esconde en dark mode */
+    color: yellow; /* Sol toma el color del fondo y se oculta en dark mode */
+}
+
+input:checked + .slider .slider-icon:last-child { /* Luna aparece en dark mode */
+    color: white; /* Luna en negro para que se vea en dark mode */
+}
+
+
+#tier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tier {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+body.dark-mode .tier {
+    background-color: #444;
+}
+
+.tier-label {
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tier[data-tier="S"] .tier-label { background-color: #FF7F7F; }
+.tier[data-tier="A"] .tier-label { background-color: #FFBF7F; }
+.tier[data-tier="B"] .tier-label { background-color: #FFDF7F; }
+.tier[data-tier="C"] .tier-label { background-color: #FFFF7F; }
+.tier[data-tier="D"] .tier-label { background-color: #BFFF7F; }
+
+.tier-content {
+    flex-grow: 1;
+    min-height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#language-pool {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#language-add{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.dark-mode #language-pool {
+    background-color: #444;
+}
+
+.language-logo {
+    width: 50px;
+    height: 50px;
+    cursor: move;
+    transition: transform 0.1s;
+}
+
+.language-logo:hover {
+    transform: scale(1.1);
+}
+
+#finish-button, .modal-content button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+#finish-button:hover, .modal-content button:hover {
+    background-color: #45a049;
+}
+
+#finish-button::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#finish-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+body.dark-mode .modal-content {
+    background-color: #444;
+    color: #fff;
+}
+
+#tier-list-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.share-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+body.dark-mode .share-buttons button {
+    color: #fff;
+}
+
+.share-buttons i {
+    transition: color 0.3s;
+}
+
+.share-buttons i:hover {
+    color: black;
+}
+
+.close-button {
+    margin-top: 20px;
+}
+
+.color-picker-btn {
+
+    margin-top: 4%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+body.dark-mode .color-picker-btn {
+    color: #fff;
+}
+
+#color-picker-modal .modal-content {
+    text-align: center;
+}
+
+#color-picker {
+    margin: 20px 0;
+}
+
+
+#add-language-form {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+#add-language-form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+#add-language-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+#add-language-button:hover {
+    background-color: #45a049;
+}
+
+#add-language-form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    width: 30%;
+}
+
+#add-language-form input[type="text"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#file-input {
+    padding: 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-mode #add-language-form label {
+    color: white;
+}
+
+body.dark-mode #add-language-form {
+    background-color: #444;
+}
+
+body.dark-mode #add-language-form input[type="text"] {
+    background: #444;
+}
+
+body.dark-mode #add-language-form input::placeholder {
+    color: white;
+}
+
+#file-input:hover {
+    background-color: #e2e2e2;
+}
+
+#file-input::file-selector-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#file-input::file-selector-button:hover {
+    background-color: #45a049;
+}
+
