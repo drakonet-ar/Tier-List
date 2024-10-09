@@ -28,7 +28,7 @@ header {
 
 
 h3{
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .contenedor-header{
@@ -307,7 +307,7 @@ body.dark-mode .share-buttons button {
 
 .color-picker-btn {
 
-    margin-top: 4%;
+    margin-top: 3.2%;
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -344,6 +344,7 @@ body.dark-mode .color-picker-btn {
     display: block;
     margin-bottom: 10px;
     width: 30%;
+    font-size: 18px;
 }
 
 #add-language-button {
@@ -366,7 +367,7 @@ body.dark-mode .color-picker-btn {
 
 #add-language-form label {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
@@ -476,14 +477,14 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 13px;
     width: 100%;
     height: 50px;
 }
 
 footer a{
     margin-left: 25px;
-    font-size: 15px;
+    font-size: 20px;
     color: black ;
 }
 
