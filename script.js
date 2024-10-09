@@ -39,35 +39,6 @@ addLanguageButton.addEventListener('click', () => {
 });
 
 
-/*
-const languages = [
-    { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-    { name: 'Java', logo: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
-    { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-    { name: 'Ruby', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg' },
-    { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
-    { name: 'Swift', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg' },
-    { name: 'Go', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
-    { name: 'Rust', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg' }, // Rust
-    { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-    { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
-    { name: 'Vue', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
-    { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-    { name: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
-    { name: 'Kotlin', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
-    { name: 'Scala', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg' },
-    { name: 'Perl', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg' },
-    { name: 'Haskell', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg' },
-    { name: 'Lua', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg' },
-    { name: 'C#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' }, // C#
-    { name: 'Elixir', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg' }, // Elixir
-    { name: 'Shell', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg' }, // Shell/Bash
-    { name: 'CoffeeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/coffeescript/coffeescript-original.svg' }, // CoffeeScript
-    { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' }, // MATLAB
-    { name: 'F#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fsharp/fsharp-original.svg' }, // F#
-    { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' }
-];*/ 
 const languages = [
     { name: 'JavaScript', logo: 'https://img.icons8.com/color/48/000000/javascript--v1.png' },
     { name: 'Python', logo: 'https://img.icons8.com/color/48/000000/python.png' },
@@ -224,12 +195,12 @@ const createYourOwnTierButton = document.getElementById('create-your-own-tier-bu
 createYourOwnTierButton.addEventListener('click', () => {
     // Borrar todos los lenguajes del language pool
     languagePool.innerHTML = ''; // Elimina todos los elementos dentro del contenedor de lenguajes
-    document.getElementById("tier-list-title").innerText = "Your Tier List";
-    document.getElementById("tier-list-subtitle").innerText = "Your Tier List";
-    document.getElementById("tier-list-title-add").innerText = "Add new item";
-    document.getElementById("add-language-button").innerText = "Add new item";
-    document.getElementById("new-language-name-title").innerText = "New item name:";
-    document.getElementById("new-language-name").placeholder = "New item name"; // Cambiar placeholder
+    document.getElementById("tier-list-title").innerText = "Tu Tier List";
+    document.getElementById("tier-list-subtitle").innerText = "Tu Tier List";
+    document.getElementById("tier-list-title-add").innerText = "Agregar nuevo objeto";
+    document.getElementById("add-language-button").innerText = "Agregar nuevo objeto";
+    document.getElementById("new-language-name-title").innerText = "Nombre del objeto:";
+    document.getElementById("new-language-name").placeholder = "Nombre del objeto"; // Cambiar placeholder
     // Opcional: Puedes deshabilitar el botón de finalizar si es necesario
     finishButton.disabled = true; // Deshabilitar el botón de finalizar si quieres que no se pueda finalizar hasta que se agreguen nuevos lenguajes
 });
