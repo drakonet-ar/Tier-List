@@ -465,6 +465,32 @@ body.dark-mode #add-language-form input::placeholder {
     max-width: 100%; /* Asegura que no sobrepase el contenedor */
 }
 
+
+footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+footer a{
+    margin-left: 25px;
+    font-size: 15px;
+    color: black ;
+}
+
+body.dark-mode footer a{
+    color: white;
+}
+
+footer a:hover{
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 1020px) {
     #add-language-form input {
         width: 80%;
