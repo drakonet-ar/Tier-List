@@ -176,6 +176,7 @@ body.dark-mode .tier {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 #language-add{
