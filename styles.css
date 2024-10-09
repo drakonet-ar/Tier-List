@@ -4,8 +4,15 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     transition: background-color 0.3s, color 0.3s;
+    width: 97.5%;
     overflow-x: hidden;
 }
+
+.contenedor-principal{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 
 body.dark-mode {
     background-color: #333;
@@ -19,9 +26,6 @@ header {
     margin-bottom: 20px;
 }
 
-h1 {
-    margin: 0;
-}
 
 h3{
     font-size: 24px;
@@ -30,12 +34,12 @@ h3{
 .contenedor-header{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    justify-content: center;
 }
 
 .logo{
     width: 50%!important;
-    margin-left: -150px;
 }
 
 .slider-icon {
@@ -508,8 +512,18 @@ footer a:hover{
     }
 
     body{
-        overflow-x: hidden!important;
-        margin-left: 15px;
+        width: 70%;
+        overflow-x: hidden;
     }
+
+    .contenedor-principal{
+        width: 128%;
+        overflow-x: hidden;
+    }
+
+    .dark-mode-toggle{
+        margin-left: -40px;
+    }
+
 
 }
