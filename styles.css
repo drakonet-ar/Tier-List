@@ -4,6 +4,7 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -505,4 +506,10 @@ footer a:hover{
         transform: translateX(115%); /* Desliza el toggle a la derecha */
         background-color: white;
     }
+
+    body{
+        overflow-x: hidden!important;
+        margin-left: 15px;
+    }
+
 }
