@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title id="tier-list-title">Tier List Lenguajes</title>
     <link rel="icon" href="/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -89,9 +89,11 @@
     </div>
     <div id="color-picker-modal" class="modal">
         <div class="modal-content">
-            <h2>Elije el color de fondo</h2>
+            <h2>Elije el color de fondo y el texto</h2>
             <input type="color" id="color-picker">
-            <button onclick="applyColor()">Aplicar</button>
+            <input type="text" id="tier-label-input" placeholder="Nuevo texto para la etiqueta">
+            <button onclick="applyColor()">Aplicar Color</button>
+            <button onclick="applyName()">Aplicar Name</button>
             <button class="close-button" onclick="closeModal('color-picker-modal')">Cerrar</button>
         </div>
     </div>

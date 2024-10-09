@@ -77,7 +77,7 @@ const languages = [
 
 const languagePool = document.getElementById('language-pool');
 const finishButton = document.getElementById('finish-button');
-let currentTier = null;
+
 
 languages.forEach(language => {
     const img = document.createElement('img');
@@ -145,10 +145,6 @@ function finishTierList() {
 finishButton.addEventListener('click', finishTierList);
 
 
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-}
 
 function shareToSocialMedia(platform) {
     const tierListText = document.getElementById('tier-list-text').innerText;
@@ -170,6 +166,8 @@ function shareToSocialMedia(platform) {
     window.open(url, '_blank');
 }
 
+let currentTier = null;
+
 function openColorPicker(tier) {
     currentTier = tier;
     const modal = document.getElementById('color-picker-modal');
@@ -179,8 +177,29 @@ function openColorPicker(tier) {
 function applyColor() {
     const color = document.getElementById('color-picker').value;
     const tierLabelElement = document.querySelector(`.tier[data-tier="${currentTier}"] .tier-label`);
+        closeModal('color-picker-modal');
+    // Cambiar el color de fondo
     tierLabelElement.style.backgroundColor = color;
+    
     closeModal('color-picker-modal');
+}
+
+
+function applyName(){
+    const tierLabelElement = document.querySelector(`.tier[data-tier="${currentTier}"] .tier-label`);
+    
+    // Cambiar el texto de la etiqueta si hay un nuevo texto ingresado
+    const newLabelText = document.getElementById('tier-label-input').value.trim();
+    if (newLabelText) {
+        tierLabelElement.textContent = newLabelText;
+    }
+    
+    closeModal('color-picker-modal');
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
 }
 
 
