@@ -529,5 +529,8 @@ footer a:hover{
         text-align: center!important;
     }
 
+    .color-picker-btn{
+        margin-top: 50px;
+    }
 
 }
