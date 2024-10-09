@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="tier-list-title">Programming Language Tier List</title>
+    <title id="tier-list-title">Tier List</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1 id="tier-list-subtitle">Tier List Languages</h1>
+        <h1 id="tier-list-subtitle">Tier List Lenguajes</h1>
         <div class="dark-mode-toggle">
             <input type="checkbox" id="dark-mode-toggle">
             <label for="dark-mode-toggle" class="slider">
@@ -50,23 +50,23 @@
     <div id="language-pool">
         <!-- Language logos will be dynamically added here -->
     </div>
-    <button id="finish-button" title="Please drag all languages to a tier before finishing">Finish Tier List</button>
-    <button id="download-tierlist">Download Tier List</button>
+    <button id="finish-button" title="Porfavor arrastra todos los objetos a la Tier List para terminar">Terminar Tier List</button>
+    <button id="download-tierlist">Descargar Tier List</button>
     <!-- Formulario para agregar un nuevo lenguaje -->
     <div id="add-language-form">
-        <h3 id="tier-list-title-add">Add New Language</h3>
-        <label id="new-language-name-title" for="new-language-name">Language Name:</label>
-        <input type="text" id="new-language-name" placeholder="Enter language name" required>
-        <label for="new-language-logo">Upload Logo:</label>
+        <h3 id="tier-list-title-add">Agrega un Lenguaje nuevo</h3>
+        <label id="new-language-name-title" for="new-language-name">Nombre del Lenguaje:</label>
+        <input type="text" id="new-language-name" placeholder="Ingresa el nombre del lenguaje" required>
+        <label for="new-language-logo">Cargar Logo:</label>
         <input type="file" id="new-language-logo" accept="image/*" required>
-        <button id="add-language-button">Add Language</button>
+        <button id="add-language-button">Agregar Lenguaje</button>
     </div>
 
-    <button id="create-your-own-tier-button">Create your own Tier</button>
+    <button id="create-your-own-tier-button">Crea tu propio Tier List</button>
 
     <div id="share-modal" class="modal">
         <div class="modal-content">
-            <h2>Share Your Tier List</h2>
+            <h2>Comparte Tier List</h2>
             <div id="tier-list-text"></div>
             <div class="share-buttons">
                 <button onclick="shareToSocialMedia('twitter')">
@@ -79,15 +79,15 @@
                     <i class="bi bi-linkedin"></i>
                 </button>
             </div>
-            <button onclick="closeModal('share-modal')" class="close-button">Close</button>
+            <button onclick="closeModal('share-modal')" class="close-button">Cerrar</button>
         </div>
     </div>
     <div id="color-picker-modal" class="modal">
         <div class="modal-content">
-            <h2>Choose Background Color</h2>
+            <h2>Elije el color de fondo</h2>
             <input type="color" id="color-picker">
-            <button onclick="applyColor()">Apply</button>
-            <button class="close-button" onclick="closeModal('color-picker-modal')">Close</button>
+            <button onclick="applyColor()">Aplicar</button>
+            <button class="close-button" onclick="closeModal('color-picker-modal')">Cerrar</button>
         </div>
     </div>
     <script src="script.js"></script>
