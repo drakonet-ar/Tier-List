@@ -412,3 +412,20 @@ body.dark-mode #add-language-form input::placeholder {
     background-color: #45a049;
 }
 
+#create-your-own-tier-button{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(202, 27, 27);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+#create-your-own-tier-button:hover {
+    background-color: rgb(150, 45, 45);
+}

@@ -189,3 +189,19 @@ darkModeToggle.addEventListener('change', () => {
 
 // Initialize the finish button state
 updateFinishButton();
+
+
+const createYourOwnTierButton = document.getElementById('create-your-own-tier-button');
+
+createYourOwnTierButton.addEventListener('click', () => {
+    // Borrar todos los lenguajes del language pool
+    languagePool.innerHTML = ''; // Elimina todos los elementos dentro del contenedor de lenguajes
+    document.getElementById("tier-list-title").innerText = "Your Tier List";
+    document.getElementById("tier-list-subtitle").innerText = "Your Tier List";
+    document.getElementById("tier-list-title-add").innerText = "Add new item";
+    document.getElementById("add-language-button").innerText = "Add new item";
+    document.getElementById("new-language-name-title").innerText = "New item name:";
+    document.getElementById("new-language-name").placeholder = "New item name"; // Cambiar placeholder
+    // Opcional: Puedes deshabilitar el botón de finalizar si es necesario
+    finishButton.disabled = true; // Deshabilitar el botón de finalizar si quieres que no se pueda finalizar hasta que se agreguen nuevos lenguajes
+});

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Language Tier List</title>
+    <title id="tier-list-title">Programming Language Tier List</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Tier List Languages</h1>
+        <h1 id="tier-list-subtitle">Tier List Languages</h1>
         <div class="dark-mode-toggle">
             <input type="checkbox" id="dark-mode-toggle">
             <label for="dark-mode-toggle" class="slider">
@@ -51,16 +51,16 @@
     </div>
     <button id="finish-button" title="Please drag all languages to a tier before finishing">Finish Tier List</button>
     <!-- Formulario para agregar un nuevo lenguaje -->
-<div id="add-language-form">
-    <h3>Add New Language</h3>
-    <label for="new-language-name">Language Name:</label>
-    <input type="text" id="new-language-name" placeholder="Enter language name" required>
-    
-    <label for="new-language-logo">Upload Logo:</label>
-    <input type="file" id="new-language-logo" accept="image/*" required>
-    
-    <button id="add-language-button">Add Language</button>
-</div>
+    <div id="add-language-form">
+        <h3 id="tier-list-title-add">Add New Language</h3>
+        <label id="new-language-name-title" for="new-language-name">Language Name:</label>
+        <input type="text" id="new-language-name" placeholder="Enter language name" required>
+        <label for="new-language-logo">Upload Logo:</label>
+        <input type="file" id="new-language-logo" accept="image/*" required>
+        <button id="add-language-button">Add Language</button>
+    </div>
+
+    <button id="create-your-own-tier-button">Create your own Tier</button>
 
     <div id="share-modal" class="modal">
         <div class="modal-content">
