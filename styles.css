@@ -131,11 +131,11 @@ body.dark-mode .tier {
     justify-content: center;
 }
 
-.tier[data-tier="S"] .tier-label { background-color: #FF7F7F; }
-.tier[data-tier="A"] .tier-label { background-color: #FFBF7F; }
+.tier[data-tier="D"] .tier-label { background-color: #FF7F7F; }
+.tier[data-tier="C"] .tier-label { background-color: #FFBF7F; }
 .tier[data-tier="B"] .tier-label { background-color: #FFDF7F; }
-.tier[data-tier="C"] .tier-label { background-color: #FFFF7F; }
-.tier[data-tier="D"] .tier-label { background-color: #BFFF7F; }
+.tier[data-tier="A"] .tier-label { background-color: #FFFF7F; }
+.tier[data-tier="S"] .tier-label { background-color: #BFFF7F; }
 
 .tier-content {
     flex-grow: 1;
