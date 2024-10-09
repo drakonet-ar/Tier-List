@@ -143,6 +143,7 @@ body.dark-mode .tier {
 }
 
 .tier-label {
+    min-width: 100px;
     width: 100px;
     padding: 10px;
     font-weight: bold;
