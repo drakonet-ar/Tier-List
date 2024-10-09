@@ -91,7 +91,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(38px); /* Desliza el toggle a la derecha */
+    transform: translateX(140%); /* Desliza el toggle a la derecha */
     background-color: white;
 }
 
