@@ -525,5 +525,9 @@ footer a:hover{
         margin-left: -40px;
     }
 
+    #add-language-form{
+        text-align: center!important;
+    }
+
 
 }
