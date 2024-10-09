@@ -1,3 +1,7 @@
+function showAlert() {
+    alert("Por favor arrastra todos los objetos a la Tier List\npara terminar");
+}
+
 const addLanguageButton = document.getElementById('add-language-button');
 
 addLanguageButton.addEventListener('click', () => {
