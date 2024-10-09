@@ -429,3 +429,42 @@ body.dark-mode #add-language-form input::placeholder {
 #create-your-own-tier-button:hover {
     background-color: rgb(150, 45, 45);
 }
+
+#download-tierlist{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(13, 162, 221);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+#download-tierlist:hover {
+    background-color: rgb(45, 138, 150);
+}
+
+.language-logo {
+    width: 50px; /* O el tamaño que necesites */
+    height: auto; /* Mantiene la proporción */
+    max-width: 100%; /* Asegura que no sobrepase el contenedor */
+}
+
+@media (max-width: 1020px) {
+    #add-language-form input {
+        width: 80%;
+    }
+    #add-language-form label {
+        width: 80%;
+    }
+    #new-language-name{
+        width: 80%!important;
+    }
+    input:checked + .slider:before {
+        transform: translateX(115%); /* Desliza el toggle a la derecha */
+        background-color: white;
+    }
+}

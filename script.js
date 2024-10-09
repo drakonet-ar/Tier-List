@@ -39,6 +39,7 @@ addLanguageButton.addEventListener('click', () => {
 });
 
 
+/*
 const languages = [
     { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
     { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
@@ -66,8 +67,35 @@ const languages = [
     { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' }, // MATLAB
     { name: 'F#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fsharp/fsharp-original.svg' }, // F#
     { name: 'R', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' }
+];*/ 
+const languages = [
+    { name: 'JavaScript', logo: 'https://img.icons8.com/color/48/000000/javascript--v1.png' },
+    { name: 'Python', logo: 'https://img.icons8.com/color/48/000000/python.png' },
+    { name: 'Java', logo: 'https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png' },
+    { name: 'C++', logo: 'https://img.icons8.com/color/48/000000/c-plus-plus-logo.png' },
+    { name: 'Ruby', logo: 'https://img.icons8.com/?size=100&id=22189&format=png&color=000000' },
+    { name: 'PHP', logo: 'https://img.icons8.com/?size=100&id=YrKoPXb4jv9l&format=png&color=000000' },
+    { name: 'Swift', logo: 'https://img.icons8.com/color/48/000000/swift.png' },
+    { name: 'Go', logo: 'https://img.icons8.com/color/48/000000/golang.png' },
+    { name: 'Rust', logo: 'https://img.icons8.com/?size=100&id=meGB5Ip7aLFG&format=png&color=000000' },
+    { name: 'TypeScript', logo: 'https://img.icons8.com/color/48/000000/typescript.png' },
+    { name: 'C', logo: 'https://img.icons8.com/color/48/000000/c-programming.png' },
+    { name: 'Vue', logo: 'https://img.icons8.com/color/48/000000/vue-js.png' },
+    { name: 'Node.js', logo: 'https://img.icons8.com/color/48/000000/nodejs.png' },
+    { name: 'Dart', logo: 'https://img.icons8.com/color/48/000000/dart.png' },
+    { name: 'Kotlin', logo: 'https://img.icons8.com/color/48/000000/kotlin.png' },
+    { name: 'Scala', logo: 'https://img.icons8.com/?size=100&id=FIdVBOahSJu0&format=png&color=000000' },
+    { name: 'Perl', logo: 'https://img.icons8.com/color/48/000000/perl.png' },
+    { name: 'Haskell', logo: 'https://img.icons8.com/color/48/000000/haskell.png' },
+    { name: 'Lua', logo: 'https://img.icons8.com/?size=100&id=42bqS7y7Ga9o&format=png&color=000000' },
+    { name: 'C#', logo: 'https://img.icons8.com/?size=100&id=55251&format=png&color=000000' },
+    { name: 'Shell', logo: 'https://img.icons8.com/?size=100&id=9MJf0ngDwS8z&format=png&color=000000' },
+    { name: 'CoffeeScript', logo: 'https://img.icons8.com/?size=100&id=CdAI8bUKMhTO&format=png&color=000000' },
+    { name: 'MATLAB', logo: 'https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000' },
+    { name: 'R', logo: 'https://img.icons8.com/?size=100&id=21cojJTVtdmQ&format=png&color=000000' },
+    { name: 'HTML', logo: 'https://img.icons8.com/color/48/000000/html-5.png' }, // HTML
+    { name: 'CSS', logo: 'https://img.icons8.com/color/48/000000/css3.png' } // CSS
 ];
-
 
 
 
@@ -205,3 +233,27 @@ createYourOwnTierButton.addEventListener('click', () => {
     // Opcional: Puedes deshabilitar el botón de finalizar si es necesario
     finishButton.disabled = true; // Deshabilitar el botón de finalizar si quieres que no se pueda finalizar hasta que se agreguen nuevos lenguajes
 });
+
+
+const downloadTierListButton = document.getElementById('download-tierlist');
+downloadTierListButton.addEventListener('click', () => {
+    const tierList = document.getElementById('tier-list');
+
+    // Capturar la tier list usando html2canvas
+    html2canvas(tierList, {
+        useCORS: true, // Habilitar CORS para imágenes externas
+        allowTaint: false, // No permitir imágenes tainted
+        logging: true, // Activar logging para depurar
+        scale: 2, // Mejorar la resolución de la imagen generada
+        backgroundColor: null // Asegura que el fondo sea transparente si es necesario
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'tier-list.png'; // Nombre del archivo descargado
+        link.click(); // Simula el click para descargar la imagen
+    }).catch(err => {
+        console.error("Error capturing the tier list: ", err);
+    });
+});
+
+
