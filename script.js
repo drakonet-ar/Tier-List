@@ -218,6 +218,13 @@ const createYourOwnTierButton = document.getElementById('create-your-own-tier-bu
 createYourOwnTierButton.addEventListener('click', () => {
     // Borrar todos los lenguajes del language pool
     languagePool.innerHTML = ''; // Elimina todos los elementos dentro del contenedor de lenguajes
+
+    // Aquí también se podrían eliminar los lenguajes de los tiers, si es necesario
+    const tiers = document.querySelectorAll('.tier-content'); // Suponiendo que cada tier tiene una clase 'tier-content'
+    tiers.forEach(tier => {
+        tier.innerHTML = ''; // Esto elimina todos los lenguajes de cada tier
+    });
+    
     document.getElementById("tier-list-title").innerText = "Tu Tier List";
     document.getElementById("tier-list-subtitle").innerText = "Tu Tier List";
     document.getElementById("tier-list-title-add").innerText = "Agregar nuevo objeto";
@@ -227,7 +234,6 @@ createYourOwnTierButton.addEventListener('click', () => {
     // Opcional: Puedes deshabilitar el botón de finalizar si es necesario
     finishButton.disabled = true; // Deshabilitar el botón de finalizar si quieres que no se pueda finalizar hasta que se agreguen nuevos lenguajes
 });
-
 
 const downloadTierListButton = document.getElementById('download-tierlist');
 downloadTierListButton.addEventListener('click', () => {
